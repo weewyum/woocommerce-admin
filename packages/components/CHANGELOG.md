@@ -1,6 +1,8 @@
-# (unreleased)
+# 2.0.0 (Unreleased)
 - Chart legend component now uses withInstanceId HOC so the ids used in several HTML elements are unique.
 - Chart component: new prop `filterParam` used to detect selected items in the current query. If there are, they will be displayed in the chart even if their values are 0.
+- Calendar: Expose `isInvalidDate` prop to `DatePicker` to indicated invalid days that are not selectable.
+- Calendar: Expose `isInvalidDate` prop to `DateRange` and remove the `invalidDays` prop.
 
 # 1.6.0
 - Chart component: new props `emptyMessage` and `baseValue`. When an empty message is provided, it will be displayed on top of the chart if there are no values different than `baseValue`.

@@ -7,6 +7,7 @@ import { Component, Fragment } from '@wordpress/element';
 import { TabPanel, Button } from '@wordpress/components';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import moment from 'moment';
 
 /**
  * Internal dependencies
@@ -34,6 +35,10 @@ class DatePickerContent extends Component {
 		if ( 'period' === tab && 'custom' === period ) {
 			onUpdate( { period: 'today' } );
 		}
+	}
+
+	isFutureDate( dateString ) {
+		return moment().isBefore( moment( dateString ), 'day' );
 	}
 
 	render() {
@@ -91,7 +96,7 @@ class DatePickerContent extends Component {
 										after={ after }
 										before={ before }
 										onUpdate={ onUpdate }
-										invalidDays="future"
+										isInvalidDate={ this.isFutureDate }
 										focusedInput={ focusedInput }
 										afterText={ afterText }
 										beforeText={ beforeText }
