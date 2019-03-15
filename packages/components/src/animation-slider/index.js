@@ -28,11 +28,11 @@ class AnimationSlider extends Component {
 			onExited();
 		}
 
-		if ( ! focusOnChange || ! this.container.current ) {
+		if ( false === focusOnChange || ! this.container.current ) {
 			return;
 		}
 
-		const tabbableIndex = 'firstElement' === focusOnChange ? 0 : focusOnChange;
+		const tabbableIndex = true === focusOnChange ? 0 : focusOnChange;
 		const tabbable = focus.tabbable.find( this.container.current )[ tabbableIndex ];
 
 		if ( tabbable ) {

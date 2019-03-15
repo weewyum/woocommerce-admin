@@ -182,7 +182,7 @@ class FilterPicker extends Component {
 					position="bottom"
 					expandOnMobile
 					headerTitle={ __( 'filter report to show:', 'woocommerce-admin' ) }
-					focusOnMount={ parentFilter ? 1 : 'firstElement' }
+					focusOnMount={ parentFilter ? 1 : 0 }
 					renderToggle={ ( { isOpen, onToggle } ) => (
 						<DropdownButton
 							onClick={ onToggle }
@@ -191,7 +191,7 @@ class FilterPicker extends Component {
 						/>
 					) }
 					renderContent={ ( { onClose } ) => (
-						<AnimationSlider animationKey={ nav } animate={ animate } focusOnChange={ parentFilter ? 1 : 'firstElement' }>
+						<AnimationSlider animationKey={ nav } animate={ animate } focusOnChange={ parentFilter ? 1 : 0 }>
 							{ () => (
 								<ul className="woocommerce-filters-filter__content-list">
 									{ parentFilter && (
