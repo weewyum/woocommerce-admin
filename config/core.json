@@ -4,6 +4,7 @@
 		"analytics": false,
 		"dashboard": false,
 		"devdocs": false,
-		"store-alerts": false
+		"store-alerts": false,
+		"onboarding": true
 	}
 }
